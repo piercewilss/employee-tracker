@@ -1,12 +1,12 @@
-DROP DATABASE IF EXISTS employee_db
-CREATE DATABASE employee_db
+DROP DATABASE IF EXISTS employee_db;
+CREATE DATABASE employee_db;
 
-USE employee_db
+USE employee_db;
 
 CREATE TABLE department (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(30)
-    )
+    );
 
 
 CREATE TABLE role (
@@ -17,7 +17,7 @@ CREATE TABLE role (
     FOREIGN KEY (department_id) REFERENCES department(id)
     ON DELETE SET NULL
 
-)
+);
 
 
 CREATE TABLE employee (
@@ -29,6 +29,6 @@ CREATE TABLE employee (
     FOREIGN KEY (role_id) REFERENCES role(id)
     ON DELETE SET NULL
 
-)
+);
 
-INSERT INTO department(name) VALUES("Service")
+INSERT INTO department(name) VALUES("Service");
