@@ -12,7 +12,7 @@ inquirer
       choices: [
         'view all departments', 
         'view all roles', 
-        'view all employess',
+        'view all employees',
         'add a department',
         'add a role',
         'add an employee',
@@ -27,5 +27,8 @@ inquirer
     }
     if (response.choices === 'view all roles') {
         viewRoles()
+    }
+    if (response.choices === 'view all employees') {
+      viewEmployees()
     }
   });
